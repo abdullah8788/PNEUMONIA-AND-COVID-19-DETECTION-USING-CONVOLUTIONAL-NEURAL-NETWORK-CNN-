@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>COVID/Pneumonia Detection</title>
+     <link href="/static/CSS/bootstrap.min.css" rel="stylesheet">
+     <link href="/static/CSS/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+  <div class="topnav">
+  <a href="#">Home</a>
+  <a href="{{ url_for('prevetnions') }}">Preventions</a>
+  <a href="https://www.who.int/health-topics/coronavirus">COVID-19</a>
+  <a href="{{url_for ('about')}}">About</a>
+    <h1>COVID/Pneumonia Detection System</h1>
+
+    
+
+</div>
+<div class="card" style="width: 20rem;height:20rem padding:12px">
+  <img src="/static/images/logo-1-1.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">COVID-19</h5>
+    <p class="card-text">Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus.
+Most people who fall sick with COVID-19 will experience mild to moderate symptoms and recover without special treatment. However, some will become seriously ill and require medical attention.</p>
+    <a href="https://www.who.int/health-topics/coronavirus" class="btn btn-primary">Latest news</a>
+  </div>
+</div>
+</div>
+<div class="card" style="width: 20rem;height:20rem padding:12px;
+  margin-left:5rem;
+
+margin-left: 55rem;
+  margin-top: -39rem;">
+  <img src="/static/images/pn.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Pneumonia</h5>
+    <p class="card-text">Pneumonia is a form of acute respiratory infection that affects the lungs. The lungs are made up of small sacs called alveoli,, the alveoli are filled with pus and fluid, which makes breathing painful and limits oxygen intake</p>
+    <a href="https://www.who.int/news-room/fact-sheets/detail/pneumonia#:~:text=Pneumonia%20is%20a%20form%20of,painful%20and%20limits%20oxygen%20intake." class="btn btn-primary">Latest news</a>
+  </div>
+</div>
+
+    <div class="main">
+
+    <form class="form" action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data">
+  
+<h1>Detect COVID/Pneumonia</h1>
+
+<label for="images" class="drop-container">
+  <span class="drop-title">Drop files here</span>
+  or
+  <input type="file"name="image" id="images" accept="image/*" required>
+</label>
+
+
+
+
+      <input type="submit" value="Predict">
+    </form>
+  </div>
+ <script src="/static/script.js"></script>
+
+ <script src="/static/bootstrap.bundle.min.js"></script>
+</body>
+
+<footer>
+  <div class="container">
+    <div class="footer-left">
+      <h3>Detection System</h3>
+
+    <p>Author</p>
+        <li><a href="#hurairabaloch996@gmail.com">hurairabaloch996@gmail.com</a></li>
+        <li><a href="#hurairabaloch996@gmail.com">MuhammadAbdullah8788@gmail.com</a></li>
+    </div>
+    <div class="footer-right">
+      <h3>Connect With Us</h3>
+      <ul>
+        <li><a href="https://web.facebook.com/">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</html>
