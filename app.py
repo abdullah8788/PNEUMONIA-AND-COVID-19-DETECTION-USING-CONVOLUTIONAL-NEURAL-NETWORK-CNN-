@@ -89,43 +89,5 @@ if __name__ == '__main__':
 
 
 
-# @app.route('/predict', methods=['POST'])
-# def predict():
-
-#     image_name = request.files['image'].filename
-#     upload_dir = './Uploaded_images'
-#     image_path = os.path.join(upload_dir, image_name)
-#     request.files['image'].save(image_path)
-#     image = request.files['image'].read()
-#     image = np.asarray(bytearray(image))
-#     image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
-#     image = cv2.resize(image, (50, 50))
-#     image = image.astype('float32')
-#     image /= 255
-#     image = np.expand_dims(image, axis=0)
-
-#     class_names = ['NORMAL', 'PNEUMONIA', 'COVID-19']
-#     predictions = model.predict(image)[0]
-#     predictions = predictions.tolist()
-    
-
-#     prediction = class_names[np.argmax(predictions)]
-
-#     max_prob = round(max(predictions) * 100,2)
-
-#     max_prob_formatted = "{:.0%}".format(max_prob / 100)
-
-#     # we can also return the jsonify object
-
-#     return jsonify(max_prob=max_prob_formatted, prediction=prediction)
-
-# return render_template("sub.html", prediction=prediction, max_prob=max_prob,)
-# for the probability of three classes
-# class_names = ['Normal', 'Pneumonia', 'COVID']
-# result = {}
-# for i in range(len(predictions)):
-#     result[class_names[i]] = predictions[i]
-# return jsonify(result)
-# max_prob=round(max(prediction)*100, 2)
 
 
